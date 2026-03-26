@@ -1,7 +1,6 @@
 package products;
 
 public class Book extends Product {
-    // addsdk
     int numberOfPages;
 
     // constructors
