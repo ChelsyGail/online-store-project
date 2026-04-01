@@ -18,8 +18,4 @@ public class Book extends Product {
         this.numberOfPages = numberOfPages;
     }
 
-    public static void main(String[] args) {
-        Book book1 = new Book(21,"yes", "romance", "df", "n/a", 230);
-       // System.out.println(book1.getPrice());
-    }
 }
