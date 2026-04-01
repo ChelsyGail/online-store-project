@@ -4,7 +4,7 @@ public class Template extends Product {
     String medium;
 
     // constructor
-    Template(double price, String title, String genre, String artist, String seller, String medium) {
+    public Template(double price, String title, String genre, String artist, String seller, String medium) {
         super(price, title, genre, artist, seller);
         this.medium = medium;
     }

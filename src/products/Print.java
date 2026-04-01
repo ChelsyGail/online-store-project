@@ -4,7 +4,7 @@ public class Print extends Product {
     double length;
     double width;
 
-    Print(double price, String title, String genre, String artist, String seller, double length, double width) {
+    public Print(double price, String title, String genre, String artist, String seller, double length, double width) {
         super(price, title, genre, artist, seller);
         this.length = length;
         this.width = width;

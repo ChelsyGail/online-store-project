@@ -1,23 +1,24 @@
 package members;
 
-import products.Book;
-import products.Print;
-import products.Template;
+import products.Product;
 
 
 public class SystemManager {
     // create storage for products
-    public static Book[] myBooks = new Book[20];
-    public static Print[] myPrints = new Print[20];
-    public static Template[] myTemplates = new Template[20];
+    public static Product[] products = new Product[50];
+    static int productCount = 0;
 
-    static int bookCount = 0;
-    int printCount = 0;
-    int templateCount = 0;
 
     // adding new products
-    public static void addBook(double price, String title, String genre, String artist, String seller, int numberOfPages) {
-        myBooks[bookCount] = new Book(price, title, genre, artist, seller, numberOfPages);
-        bookCount++;
+    /**
+     *
+     * @param product the product to add (ex. book, print, etc.)
+     */
+    public static void addProduct(Product product) {
+        products[productCount] = product;
+        productCount++;
     }
+
+
+
 }
