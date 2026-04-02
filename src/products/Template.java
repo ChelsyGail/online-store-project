@@ -11,10 +11,12 @@ public class Template extends Product {
 
     // setters and getters
     public String getMedium() {
+
         return medium;
     }
 
     public void setMedium(String medium) {
+
         this.medium = medium;
     }
 }

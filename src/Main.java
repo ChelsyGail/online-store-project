@@ -1,8 +1,21 @@
 import members.SystemManager;
-import static members.SystemManager.myBooks;
+import members.UserManager;
+import products.Book;
+import products.Print;
+import products.Template;
 
-public static void main(String[] args) {
+public void main(String[] args) {
+    UserManager.addUser("admin", "");
+
+    Template template = new Template(12.99, "Test", "Test", "Test", "Test", "Powerpoint");
+
+    SystemManager.addProduct(new Book(12.99, "Test", "Test", "Test", "Test", 123), "admin", "");
+    SystemManager.addProduct(template, "admin", "");
+    SystemManager.addProduct(new Print(12.90, "Test", "Test", "Test", "Test", 12, 4), "admin", "");
 
 
-
+//
+//    if (product1 instanceof Template template) {
+//        System.out.println(template.getMedium());
+//    }
 }

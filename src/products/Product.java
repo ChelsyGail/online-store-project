@@ -1,6 +1,9 @@
 package products;
 
+import java.util.UUID;
+
 public class Product {
+    public final UUID id = UUID.randomUUID();
     protected double price;
     protected String title;
     protected String genre;
@@ -56,4 +59,5 @@ public class Product {
     public void setSeller(String seller) {
         this.seller = seller;
     }
+
 }
