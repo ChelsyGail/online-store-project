@@ -10,10 +10,12 @@ public class SystemManager {
     // create storage for products
     private static Dictionary<UUID, Product> products = new Hashtable<>();
 
-    // adding new products. The username and password is to verify they are a user and are authorized to do such actions
     /**
      *
-     * @param product the product to add (ex. book, print, etc.)
+     * @param product that the seller wants to add
+     * @param username of the seller
+     * @param password of the buyer
+     * Verifies if this user has authority to sell a product before listing the product
      */
     public static void addProduct(Product product, String username, String password) {
         if (UserManager.verify(username, password)) {
@@ -21,14 +23,22 @@ public class SystemManager {
         }
     }
 
-    // place orders
+    /**
+     *
+     * @param id id of the produce
+     * @param username of buyer
+     * @param password of buyer
+     * @return true if order is placed, false otherwise
+     */
     public static boolean placeOrder(UUID id, String username, String password) {
         if (UserManager.verify(username, password)) {
             products.remove(id);
-            return true; // order placed
+            return true;
         } else {
             return false;
         }
     }
+
+    // filtering
 
 }
