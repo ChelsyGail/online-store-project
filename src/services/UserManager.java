@@ -1,9 +1,10 @@
-package members;
+package services;
 
 import java.util.Dictionary;
+import java.util.Hashtable;
 
 public class UserManager {
-    private Dictionary <String, String> usernameToPasswordMap;
+    private static final Dictionary<String, String> usernameToPasswordMap = new Hashtable<>();
 
     /**
      * Adds a new user.
@@ -11,7 +12,7 @@ public class UserManager {
      * @param password password
      * @return True if user was added and false if not
      */
-    public boolean addUser(String username, String password) {
+    public static boolean addUser(String username, String password) {
         if (usernameToPasswordMap.get(username) == null) {
             usernameToPasswordMap.put(username, password);
             return true;
@@ -26,8 +27,8 @@ public class UserManager {
      * @param password the password associated with the username
      * @return True if the username matches the password and false otherwise
      */
-    public boolean verify(String username, String password) {
-        if (usernameToPasswordMap.get(username) == password) {
+    public static boolean verify(String username, String password) {
+        if (usernameToPasswordMap.get(username).equals(password)) {
             return true;
         } else {
             return false;
