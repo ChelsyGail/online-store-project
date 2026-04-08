@@ -1,6 +1,6 @@
-package members;
+package services;
 
-import products.Product;
+import models.Product;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.UUID;

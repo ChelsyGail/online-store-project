@@ -1,5 +1,4 @@
-package products;
-
+package models;
 import java.util.UUID;
 
 public class Product {
@@ -10,8 +9,15 @@ public class Product {
     protected String artist;
     protected String seller;
 
-    // constructor
-    Product(double price, String title, String genre, String artist, String seller) {
+    /**
+     *
+     * @param price  the price of the product
+     * @param title  the title of the product
+     * @param genre  the genre of the product
+     * @param artist  the artist of the product
+     * @param seller  the seller of the product
+     */
+    public Product(double price, String title, String genre, String artist, String seller) {
         this.price = price;
         this.title = title;
         this.genre = genre;
@@ -59,5 +65,4 @@ public class Product {
     public void setSeller(String seller) {
         this.seller = seller;
     }
-
 }

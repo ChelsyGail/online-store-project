@@ -1,10 +1,10 @@
-package members;
+package services;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
 
 public class UserManager {
-    private static Dictionary<String, String> usernameToPasswordMap = new Hashtable<>();
+    private static final Dictionary<String, String> usernameToPasswordMap = new Hashtable<>();
 
     /**
      * Adds a new user.

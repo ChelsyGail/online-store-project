@@ -1,8 +1,8 @@
-import members.SystemManager;
-import members.UserManager;
-import products.Book;
-import products.Print;
-import products.Template;
+import services.SystemManager;
+import services.UserManager;
+import models.Book;
+import models.Print;
+import models.Template;
 
 public void main(String[] args) {
     UserManager.addUser("admin", "");
