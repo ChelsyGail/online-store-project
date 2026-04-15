@@ -1,6 +1,7 @@
 package models;
 import java.util.UUID;
 
+
 public abstract class Product {
     public final UUID id = UUID.randomUUID();
     protected double price;
@@ -65,6 +66,4 @@ public abstract class Product {
     public void setSeller(String seller) {
         this.seller = seller;
     }
-
-    // to string method for all products
-    // preview, few pages, low qual image,
+}
