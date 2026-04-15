@@ -1,7 +1,8 @@
 package models;
 import java.util.UUID;
 
-public class Product {
+
+public abstract class Product {
     public final UUID id = UUID.randomUUID();
     protected double price;
     protected String title;
