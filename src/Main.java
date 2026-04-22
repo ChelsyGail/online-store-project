@@ -5,6 +5,7 @@ import services.UserManager;
 import services.Session;
 import static services.SystemManager.getAllProducts;
 
+
 public void main(String[] args) {
     UserManager.addUser("admin", "admin123", UserType.ADMIN);
 
