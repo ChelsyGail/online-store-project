@@ -1,8 +1,14 @@
 package models;
-public class Book extends Product {
+
+import interfaces.Discountable;
+
+public class Book extends Product implements Discountable {
     private int numberOfPages;
 
-    /**
+    /** The discount percentage (0–100). Zero means no discount. */
+    private double discountPercent = 0;
+
+    /** constructs a new book
      *
      * @param price  the price of the book
      * @param title  the title of the book
@@ -31,5 +37,16 @@ public class Book extends Product {
     public void setNumberOfPages(int numberOfPages) {
         this.numberOfPages = numberOfPages;
     }
+
+    @Override
+    public void applyDiscount(double percent) {
+        this.discountPercent = percent;
+    }
+
+    @Override
+    public double getDiscountedPrice() {
+        return price - (price * discountPercent / 100);
+    }
+
 
 }

@@ -1,8 +1,13 @@
 package models;
 
-public class Template extends Product {
+import interfaces.Discountable;
+
+public class Template extends Product implements Discountable {
     // a template like for CV, for canva, powerpoint, etc. Those are the mediums
     private String medium;
+
+    /** The discount percentage (0–100). Zero means no discount. */
+    private double discountPercent = 0;
 
     /**
      *
@@ -20,12 +25,21 @@ public class Template extends Product {
 
     // setters and getters
     public String getMedium() {
-
         return medium;
     }
 
     public void setMedium(String medium) {
-
         this.medium = medium;
     }
+
+    @Override
+    public void applyDiscount(double percent) {
+        this.discountPercent = percent;
+    }
+
+    @Override
+    public double getDiscountedPrice() {
+        return price - (price * discountPercent / 100);
+    }
+
 }

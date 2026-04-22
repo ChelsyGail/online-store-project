@@ -66,4 +66,9 @@ public abstract class Product {
     public void setSeller(String seller) {
         this.seller = seller;
     }
+
 }
+
+
+    // to string method for all products
+    // preview, few pages, low qual image,
