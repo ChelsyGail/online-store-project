@@ -1,9 +1,15 @@
 package models;
 
-public class Print extends Product {
+import interfaces.Discountable;
+
+public class Print extends Product implements Discountable {
     // a print is like a poster, so length and width must be defined
     private double length;
     private double width;
+
+    /** The discount percentage (0–100). Zero means no discount. */
+    private double discountPercent = 0;
+
 
     /**
      *
@@ -36,5 +42,15 @@ public class Print extends Product {
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    @Override
+    public void applyDiscount(double percent) {
+        this.discountPercent = percent;
+    }
+
+    @Override
+    public double getDiscountedPrice() {
+        return price - (price * discountPercent / 100);
     }
 }

@@ -44,7 +44,6 @@ public class SystemManager {
     public static boolean placeOrder(UUID id) {
         // user must be logged in to place an order
         if (!Session.isLoggedIn()) return false;
-
         // product gets removed from the list once ordered
         products.remove(id);
         return true;
